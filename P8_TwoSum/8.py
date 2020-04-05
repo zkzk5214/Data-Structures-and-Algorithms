@@ -1,9 +1,8 @@
 class Solution:
     def TwoSum(self):
-        with open('1.txt', 'r') as f:
+        with open('rosalind_2sum.txt', 'r') as f:
             for line in f:
                 nums = list(map(int, line.split(' ')))
-                # print(nums)
                 flag = 0
                 for num in nums:
                     if - num in nums and num is not - num:
