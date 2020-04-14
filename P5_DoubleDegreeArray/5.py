@@ -8,6 +8,9 @@ try:
                 subsequent lines:
                 edge given by two vertices
                 '''
+        for i in f.readlines():
+            input_list = list(map(int, i.split()))
+
         V, E = map(int, f.readline().rstrip().split())
         e = [map(int, line.rstrip().split()) for line in f]
         res = []
