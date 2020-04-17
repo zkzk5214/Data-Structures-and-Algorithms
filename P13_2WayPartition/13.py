@@ -11,13 +11,8 @@ def two_way_partition(nums):
 
 
 if __name__ == '__main__':
-    with open('rosalind_par.txt', 'r') as f:
+    with open('1.txt', 'r') as f:
         for i in f.readlines():
             data = list(map(int, i.split()))
             partition = two_way_partition(data)
             print(' '.join(map(str, partition)))
-
-
-
-
-
