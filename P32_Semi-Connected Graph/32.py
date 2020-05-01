@@ -8,6 +8,7 @@ def read_graph():
         to_lists[v1 - 1].append(v2 - 1)
     return from_lists, to_lists
 
+
 def dfs(from_lists, to_lists, visited, sequence, v):
     visited[v] = True
     sequence.append(v)
@@ -17,6 +18,7 @@ def dfs(from_lists, to_lists, visited, sequence, v):
             if len(from_lists[adj]) == 0:
                 dfs(from_lists, to_lists, visited, sequence, adj)
 
+
 def topological_sort(from_lists, to_lists):
     visited = [False] * len(from_lists)
     sequence = []
@@ -25,8 +27,10 @@ def topological_sort(from_lists, to_lists):
             dfs(from_lists, to_lists, visited, sequence, i)
     return sequence
 
+
 def main():
     print(' '.join(map(lambda v: str(v + 1), topological_sort(*read_graph()))))
+
 
 if __name__ == '__main__':
     main()
